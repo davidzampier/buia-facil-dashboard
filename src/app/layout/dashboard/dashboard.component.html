@@ -1,0 +1,66 @@
+<div [@routerTransition]>
+    <!--<h2 class="text-muted">Dashboard <small>Statistics Overview</small></h2>-->
+    <div class="row">
+        <div class="col-md-12">
+            <ngb-carousel>
+                <ng-template ngbSlide *ngFor="let slider of sliders">
+                    <img class="img-fluid mx-auto d-block" [src]="slider.imagePath" width="100%">
+                    <div class="carousel-caption">
+                        <h3>{{slider.label}}</h3>
+                        <p>{{slider.text}}</p>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+        </div>
+    </div>
+    <div class="row justify-content-center" style="margin-top:15px;">
+        <div class="col-md-6">
+            <form class="form-inline justify-content-center">
+                <!--<div class="form-group">-->
+                    <input type="email" style="border-radius: 0" class="form-control" aria-describedby="emailHelp" placeholder="Encontre seu evento">
+                    <button type="button" style="border-radius: 0" class="btn btn-outline-info">Buscar</button>
+                <!--</div>-->
+            </form>
+        </div>
+    </div>
+    <hr>
+    <!--<div class="row">
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'card-primary'" [icon]="'fa-comments'" [count]="26" [label]="'New Comments!'" ></app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'card-info'" [icon]="'fa-tasks'" [count]="12" [label]="'New task!'" ></app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'card-success'" [icon]="'fa-shopping-cart'" [count]="124" [label]="'New Orders!'" ></app-stat>
+        </div>
+        <div class="col-xl-3 col-lg-6">
+            <app-stat [bgClass]="'card-danger'" [icon]="'fa-support'" [count]="13" [label]="'New Tickets!'"></app-stat>
+        </div>
+    </div>
+    <hr />-->
+    <!--<ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert>-->
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+                <img class="card-img-top" src="http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif">
+                <div class="card-block">
+                    <h4 class="card-title">Festa da Computação</h4>
+                    <div class="meta">
+                        <a href="#">Friends</a>
+                    </div>
+                    <div class="card-text">
+                        Tawshif is a web designer living in Bangladesh.
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <!--<span class="float-right">Joined in 2013</span>-->
+                    <span><i class="fa fa-clock-o"></i>  12/10/2017</span>
+                </div>
+            </div>
+        </div>
+        <!-- /.col-lg-8 -->
+
+        <!-- /.col-lg-4 -->
+    </div>
+</div>
